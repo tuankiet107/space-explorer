@@ -1,19 +1,15 @@
 import { Canvas } from "@react-three/fiber";
-import { Stars } from "@react-three/drei";
+
+import SpaceScene from "./scenes/SpaceScene";
 
 export default function App() {
   return (
     <div id="canvas-container">
-      <Canvas>
-        <Stars
-          radius={100}
-          depth={50}
-          count={5000}
-          factor={4}
-          saturation={0}
-          fade
-          speed={1}
-        />
+      <Canvas camera={{ position: [0, 25, 25], fov: 60 }}>
+        <ambientLight intensity={0.4} />
+        <directionalLight position={[10, 10, 5]} intensity={1} />
+
+        <SpaceScene />
       </Canvas>
     </div>
   );
