@@ -1,16 +1,14 @@
-import { Sphere } from "@react-three/drei";
+import { Sphere, useTexture } from "@react-three/drei";
+
+const SUN_PATH = "/src/assets/img/planets/sunmap.jpg";
 
 function Sun() {
+  const texture = useTexture(SUN_PATH);
+
   return (
     <group position={[0, 0, 0]}>
       <Sphere args={[1.5, 32, 32]}>
-        <meshStandardMaterial
-          color="#fdb813"
-          emissive="#ff9500"
-          emissiveIntensity={1}
-          roughness={0.3}
-          metalness={0.2}
-        />
+        <meshStandardMaterial map={texture} />
       </Sphere>
     </group>
   );

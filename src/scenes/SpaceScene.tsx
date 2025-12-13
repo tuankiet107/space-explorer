@@ -1,7 +1,10 @@
 import { OrbitControls, Stars } from "@react-three/drei";
 
 import Sun from "../components/Sun";
+import Planet from "../components/Planet";
 import OrbitRing from "../components/OrbitRing";
+
+import { SOLAR_SYSTEM_CONFIG } from "../utils/planet.util";
 
 function SpaceScene() {
   return (
@@ -10,8 +13,12 @@ function SpaceScene() {
 
       <Sun />
 
-      {Array.from({ length: 8 }).map((_, index) => (
-        <OrbitRing key={`orbit-${index}`} radius={index + 2} />
+      {SOLAR_SYSTEM_CONFIG.map((planet) => (
+        <OrbitRing key={`orbit-${planet.name}`} radius={planet.orbitRadius} />
+      ))}
+
+      {SOLAR_SYSTEM_CONFIG.map((planet) => (
+        <Planet key={planet.name} config={planet} />
       ))}
 
       <OrbitControls maxDistance={50} minDistance={5} />
