@@ -1,9 +1,8 @@
 import { Sphere, useTexture } from "@react-three/drei";
-
-const SUN_PATH = "/src/assets/img/planets/sunmap.jpg";
+import sunTexture from "/src/assets/img/planets/sunmap.jpg";
 
 function Sun() {
-  const texture = useTexture(SUN_PATH);
+  const texture = useTexture(sunTexture);
 
   return (
     <group position={[0, 0, 0]}>

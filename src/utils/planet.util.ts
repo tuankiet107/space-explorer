@@ -1,3 +1,12 @@
+import mercuryTexture from "/src/assets/img/planets/mercurymap.jpg";
+import venusTexture from "/src/assets/img/planets/venusmap.jpg";
+import earthTexture from "/src/assets/img/planets/earthmap.jpg";
+import marsTexture from "/src/assets/img/planets/marsmap.jpg";
+import jupiterTexture from "/src/assets/img/planets/jupitermap.jpg";
+import saturnTexture from "/src/assets/img/planets/saturnmap.jpg";
+import uranusTexture from "/src/assets/img/planets/uranusmap.jpg";
+import neptuneTexture from "/src/assets/img/planets/neptunemap.jpg";
+
 export interface PlanetConfig {
   name: string;
   size: number;
@@ -20,7 +29,7 @@ export const SOLAR_SYSTEM_CONFIG: PlanetConfig[] = [
   {
     name: "Mercury",
     size: 0.2,
-    textureUrl: "/src/assets/img/planets/mercurymap.jpg",
+    textureUrl: mercuryTexture,
     orbitRadius: 2,
     orbitSpeed: 0.03,
     rotationSpeed: 0.01,
@@ -29,7 +38,7 @@ export const SOLAR_SYSTEM_CONFIG: PlanetConfig[] = [
   {
     name: "Venus",
     size: 0.4,
-    textureUrl: "/src/assets/img/planets/venusmap.jpg",
+    textureUrl: venusTexture,
     orbitRadius: 4,
     orbitSpeed: 0.08,
     rotationSpeed: 0.005,
@@ -41,7 +50,7 @@ export const SOLAR_SYSTEM_CONFIG: PlanetConfig[] = [
   {
     name: "Earth",
     size: 0.5,
-    textureUrl: "/src/assets/img/planets/earthmap.jpg",
+    textureUrl: earthTexture,
     orbitRadius: 6,
     orbitSpeed: 0.06,
     rotationSpeed: 0.5,
@@ -53,7 +62,7 @@ export const SOLAR_SYSTEM_CONFIG: PlanetConfig[] = [
   {
     name: "Mars",
     size: 0.35,
-    textureUrl: "/src/assets/img/planets/marsmap.jpg",
+    textureUrl: marsTexture,
     orbitRadius: 8,
     orbitSpeed: 0.03,
     rotationSpeed: 0.1,
@@ -65,7 +74,7 @@ export const SOLAR_SYSTEM_CONFIG: PlanetConfig[] = [
   {
     name: "Jupiter",
     size: 1.0,
-    textureUrl: "/src/assets/img/planets/jupitermap.jpg",
+    textureUrl: jupiterTexture,
     orbitRadius: 12,
     orbitSpeed: 0.01,
     rotationSpeed: 0.5,
@@ -77,7 +86,7 @@ export const SOLAR_SYSTEM_CONFIG: PlanetConfig[] = [
   {
     name: "Saturn",
     size: 0.7,
-    textureUrl: "/src/assets/img/planets/saturnmap.jpg",
+    textureUrl: saturnTexture,
     orbitRadius: 16,
     orbitSpeed: 0.09,
     rotationSpeed: 0.012,
@@ -89,7 +98,7 @@ export const SOLAR_SYSTEM_CONFIG: PlanetConfig[] = [
   {
     name: "Uranus",
     size: 0.7,
-    textureUrl: "/src/assets/img/planets/uranusmap.jpg",
+    textureUrl: uranusTexture,
     orbitRadius: 18,
     orbitSpeed: 0.07,
     rotationSpeed: 0.008,
@@ -101,7 +110,7 @@ export const SOLAR_SYSTEM_CONFIG: PlanetConfig[] = [
   {
     name: "Neptune",
     size: 0.7,
-    textureUrl: "/src/assets/img/planets/neptunemap.jpg",
+    textureUrl: neptuneTexture,
     orbitRadius: 20,
     orbitSpeed: 0.05,
     rotationSpeed: 0.01,
